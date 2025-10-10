@@ -138,7 +138,7 @@ const CardNav = ({
 
   return (
     <div
-      className={`card-nav-container  absolute left-1/2 -translate-x-1/2 md:w-[90% w-full  z-[99] top-[1.2em] md:top-[2em] ${className}`}>
+      className={`card-nav-container  absolute left-1/2 -translate-x-1/2 md:w-[90% w-full  z-[99] top-[0.5em] md:top-[1em] ${className}`}>
       <nav
         ref={navRef}
         className={`card-nav ${isExpanded ? 'open rounded-2xl' : ' rounded-2xl'} border text-white bg-[#2726263d] backdrop-blur-sm block h-[60px] p-0 shadow-md relative overflow-hidden will-change-[height]`}>
@@ -165,7 +165,6 @@ const CardNav = ({
           </div>
 
           <a href='/' className=' text-3xl hidden md:flex'><LiaAtomSolid /></a>
-
 
           <div
             className=" flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">

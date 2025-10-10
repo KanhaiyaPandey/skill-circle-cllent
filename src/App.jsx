@@ -1,18 +1,38 @@
-import React from "react";
+import React, { use, useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import Layout from "./pages/Layout";
+import { layeoutLoader } from "./utils/loaders";
 import LandingPage from "./pages/LandingPage";
-
 
 const App = () => {
 
-  return (
-    <div className="poppins">
 
-      <div className=" relative flex items-center justify-center h-screen">
-        <img src="/circle_logo.jpg" className=" w-full h-full object-cover absolute -z-10 top-0 left-0" alt="" />
-        <LandingPage />
+  const router = createBrowserRouter([
+        {
+        path: "/",
+        element: <Layout/>,
+        children: [
+          {
+            index: true,
+            element: <Home/>,
+          },
+        ],
+         loader : layeoutLoader
+      },
+
+      {
+        path : "/landing",
+        element : <LandingPage />,
+      }
+  ])
+
+  return (
+
+      <div className="poppins">
+         <RouterProvider router={router} />
       </div>
 
-    </div>
   );
 };
 
