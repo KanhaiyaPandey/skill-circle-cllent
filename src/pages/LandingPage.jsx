@@ -48,7 +48,7 @@ const LandingPage = () => {
            <div className=" w-full grid grid-cols-1 sm:grid-cols-2 items-center justify-between md:gap-4 gap-1 mt-10">
 
 
-              <a  href="http://localhost:8080/oauth2/authorization/google"
+              <a  href={`${import.meta.env.PRODUCTION_URL}/login/oauth2/authorization/google`}
                className="relative overflow-hidden z-10 p-4 rounded-full hover:scale-105  transition-all  ease-in-out duration-500 bg-white group flex items-center justify-center w-full" >
                   {/* Animated amber circle */}
                   <div className="absolute bottom-0 right-0 w-10 h-10 bg-gradient-to-br to-[#FFA62B] from-purple-300 rounded-full transform scale-0 group-hover:scale-[20] transition-transform duration-1000 ease-out -z-10" ></div>

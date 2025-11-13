@@ -1,8 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
-import { GoArrowUpRight } from 'react-icons/go';
-import { IoIosNotifications } from "react-icons/io";
 import { LiaAtomSolid } from "react-icons/lia";
 
 
@@ -189,6 +187,8 @@ const CardNav = ({
               F&Q
             </a>
 
+            <a href=''></a>
+
             <a
                href='/about'
               type="button"
@@ -223,7 +223,8 @@ const CardNav = ({
                     className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
                     href={lnk.href}
                     aria-label={lnk.ariaLabel}>
-                    <GoArrowUpRight className="nav-card-link-icon shrink-0" aria-hidden="true" />
+                    {lnk.icon}
+                    
                     {lnk.label}
                   </a>
                 ))}
