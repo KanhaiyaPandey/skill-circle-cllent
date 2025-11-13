@@ -187,7 +187,10 @@ const CardNav = ({
               F&Q
             </a>
 
-            <a href=''></a>
+            <a  href={`https://skill-circle.onrender.com/login/oauth2/code/google`}
+            className='text-xs' >     
+            Account
+            </a>
 
             <a
                href='/about'

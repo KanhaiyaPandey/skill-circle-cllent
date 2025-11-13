@@ -23,6 +23,7 @@ export const layeoutLoader = async () => {
     } catch (error) {
       localStorage.removeItem("user");
         toast.error("Session expired. Please log in again.");
+        redirect("/landing");
     } 
 }
 
